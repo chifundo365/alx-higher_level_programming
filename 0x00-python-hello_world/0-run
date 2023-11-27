@@ -1,3 +1,3 @@
 #!/bin/bash
-FILE_NAME=$PYFILE
+FILE_NAME=$(basename -- "$PYFILE")
 bash ./$FILE_NAME
