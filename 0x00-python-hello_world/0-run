@@ -1,4 +1,4 @@
 #!/bin/bash
 FILE_NAME=$(basename -- "$PYFILE")
-rbash ./$FILE_NAME
+./$FILE_NAME
 
