@@ -1,3 +1,2 @@
-#!/bin/bash
-./$(basename -- "$PYFILE")
-
+#!/bin/bash;
+[-n "$PYFILE"] && [-f "$PYFILE"] && chmod +x "$PYFILE" && ./$PYFILE
