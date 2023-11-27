@@ -1,4 +1,2 @@
 #!/bin/bash
-FILE_NAME=$(basename -- "$PYFILE")
-./$FILE_NAME
-
+./$(basename -- "$PYFILE")
