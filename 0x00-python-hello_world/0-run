@@ -1,2 +1,2 @@
-#!/bin/bash;
-[-n "$PYFILE"] && [-f "$PYFILE"] && chmod +x "$PYFILE" && ./$PYFILE
+#!/bin/bash
+python3 $PYFILE
