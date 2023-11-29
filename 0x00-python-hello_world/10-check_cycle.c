@@ -3,7 +3,7 @@
 /**
  * check_cycle - checks if linked list has a cycle
  * @list:pointer to the head of the list
- * Return: 1 if lonked list has a cycle or -1
+ * Return: 1 if lonked list has a cycle or 0
  */
 
 int check_cycle(listint_t *list)
@@ -13,6 +13,9 @@ int check_cycle(listint_t *list)
 
 	if (!list)
 		return (0);
+
+	if (fast->next == slow)
+		return (1);
 
 	while (fast)
 	{
