@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 a = ord('a')
 for i in range(26):
-    print(chr(a), end='')
+    print("{}".format(chr(a)), end="")
     a += 1
