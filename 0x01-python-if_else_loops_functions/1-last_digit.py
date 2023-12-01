@@ -3,11 +3,13 @@ import random
 number = random.randint(-10000, 10000)
 last = str(number)[-1]
 last = int(last)
+msg = 'Last digit of {} is {}'.format(number, last)
 if number < 0:
-    print("Last digit of {} is -{} and is less than 6 and not 0".format(number, last))
+    msg = 'Last digit of {} is -{}'.format(number, last)
+    print("{} and is less than 6 and not 0".format(msg))
 elif last > 5:
-    print("Last digit of {} is {} and is greater than 5".format(number, last))
+    print("{} and is greater than 5".format(msg))
 elif last < 6 and last != 0:
-    print("Last digit of {} is {} and is less than 6 and not 0".format(number, last))
+    print("{} and is less than 6 and not 0".format(msg))
 else:
-    print("Last digit of {} is {} and is 0".format(number, last))
+    print("{} and is 0".format(msg))
