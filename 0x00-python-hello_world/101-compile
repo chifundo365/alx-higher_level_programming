@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m py_compile $PYFILE && cd __pycache__ && mv "$PYFILE.cpython-*" "../$PYFILE.pyc" && export PYFILEc="$PYFILE.pyc" && cd .. && rm -r __pycache__
+echo "Compiling $PYFILE ..." && python3 -m py_compile $PYFILE && cd __pycache__ && mv "$PYFILE.cpython-*" "../$PYFILE.pyc" && export PYFILEc="$PYFILE.pyc" && cd .. && rm -r __pycache__
