@@ -10,6 +10,3 @@ def uppercase(str):
                 result = str[i] 
             print("{}".format(result), end="")
     print("")
-
-uppercase("HOLBERTON")
-
