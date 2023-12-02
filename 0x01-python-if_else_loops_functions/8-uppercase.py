@@ -10,6 +10,3 @@ def uppercase(str):
             print("{}{}".format(upper_case, newline), end="")
         else:
             print("{}{}".format(str[i], newline), end="")
-
-
-uppercase("Best School 98 Battery street")
