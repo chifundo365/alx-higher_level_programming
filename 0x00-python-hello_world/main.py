@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("Best School")
+def run(a, b):
+    return a + b
