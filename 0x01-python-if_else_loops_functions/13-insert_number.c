@@ -49,11 +49,15 @@ listint_t *insert_node(listint_t **head, int number)
 
 				return (new_node);
 			}
-			else if (fast->n >= new_node->n || !fast)
+			else if (fast->n >= new_node->n)
 			{
 				slow->next = new_node;
 				new_node->next = fast;
 
+				return (new_node);
+			}
+			else if (!fast->next)
+			{	fast->next = new_node;
 				return (new_node);
 			}
 
