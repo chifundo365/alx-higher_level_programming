@@ -1,13 +1,12 @@
 #include "lists.h"
-#include <stdlib.h>
 /**
  * create_node - creates a node
  * @number: a number to insert in the node 'n' member
  * Return: pointer to the new node or NULL
  */
-listint_s *create_node(int number)
+listint_t *create_node(int number)
 {
-	listint_s *new_node = malloc(sizeof(listint_s));
+	listint_t *new_node = malloc(sizeof(listint_t));
 
 	if (new_node)
 	{
@@ -25,10 +24,10 @@ listint_s *create_node(int number)
  * @number: the number to insert in the created node
  * Return: pointer to the newly created noe or NULL
  */
-listint_s *insert_node(listint_s **head, int number)
+listint_t *insert_node(listint_t **head, int number)
 {
-	listint_s new_node = create_node(number);
-	listint_s fast, slow = *head;
+	listint_t new_node = create_node(number);
+	listint_t fast, slow = *head;
 
 	if (new_node)
 	{
