@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * create_node - creates a node
  * @number: a number to insert in the node 'n' member
@@ -6,7 +7,7 @@
  */
 listint_t *create_node(int number)
 {
-	listint_t *new_node = malloc(sizeof(listint_t));
+	listint_t *new_node = (listint_t *)malloc(sizeof(listint_t));
 
 	if (new_node)
 	{
@@ -26,8 +27,8 @@ listint_t *create_node(int number)
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t new_node = create_node(number);
-	listint_t fast, slow = *head;
+	listint_t *new_node = create_node(number);
+	listint_t *fast, *slow = *head;
 
 	if (new_node)
 	{
@@ -38,7 +39,7 @@ listint_t *insert_node(listint_t **head, int number)
 			return (new_node);
 		}
 
-		fast = *head->next;
+		fast = (*head)->next;
 		while (fast)
 		{
 			if (slow->n >= new_node->n)

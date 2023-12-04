@@ -1,4 +1,0 @@
-# ignore hidden files and directories
-.*
-!.gitignore
-
