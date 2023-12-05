@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-sys = __import__('sys'); getattr(sys, 'stdout').write('#pythoniscool\n')
+__import__("os").write(1, "#pythoniscool\n".encode("UTF-8"))
