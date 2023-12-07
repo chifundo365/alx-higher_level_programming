@@ -6,5 +6,5 @@ def print_matrix_integer(matrix=[[]]):
             if (isinstance(e, list)):
                 for x in e:
                     idx = e.index(x)
-                    print("{:d}".format(x), end=" " if idx != lst_idx else"")
-                print()
+                    print("{:d}".format(x), end=" " if idx != lst_idx else "")
+                print("")
