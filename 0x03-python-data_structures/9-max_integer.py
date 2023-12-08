@@ -9,3 +9,4 @@ def max_integer(my_list=[]):
                 if d > big_int:
                     big_int = d
         return big_int
+    return None
