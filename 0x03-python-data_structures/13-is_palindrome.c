@@ -1,66 +1,59 @@
 #include "lists.h"
 
-/**
- * count_list - find total number of node in list
- * @head: pointer to the start of tue list
- * Return: total number or 0
- */
-int count_list(listint_t *head)
-{
-	int c = 0;
-
-	while (head)
-	{
-		head = head->next;
-		c++;
-	}
-
-	return (c);
-}
 
 /**
- * get_node_index - find node at given index
- * @head: pointer to the start of the list
- * @idx: index
- * Return: value of memeber 'n' of the node
+ * reverse_list - reverses a linked list
+ * @head: pointer to a pointer to the 1st node
+ * Return: pointer to the first node of reversed list
  */
-int get_node_index(listint_t *head, int idx)
+listint_t *reverse_list(listint_t *head)
 {
-	int i = 0;
+	listint_t *next, *current = head, *prev = NULL;
 
-	while (head)
+	while (current)
 	{
-		if (idx == i)
-			return (head->n);
-		i++;
-		head = head->next;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
 	}
 
-	return (head->n);
+	return (prev);
 }
 
 /**
  * is_palindrome - checks if a list is a palidrome
  * @head: pointer to a pointer to the first node
- * Return: 1 if palindrome else -1
+ * Return: 1 if palindrome else 0
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp;
-	int list_len = 0;
+	listint_t *slow = *head;
+	listint_t *head2, *temp = *head, *fast = *head;
 
-	if (!(*head))
+	if (!fast || !fast->next)
 		return (1);
-	temp = *head;
-	list_len = count_list(temp) - 1;
 
-
-	while (temp)
+	while (fast && fast->next)
 	{
-		if (temp->n != get_node_index(*head, list_len))
-			return (0);
-		temp = temp->next;
-		list_len--;
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if (!fast)
+		{
+			head2 = reverse_list(slow);
+			print_listint(head2);
+			while (temp != slow)
+			{
+				if (temp->n != head2->n)
+				{
+					return (0);
+				}
+
+				temp = temp->next;
+				head2 = head2->next;
+			}
+		}
 	}
 
 	return (1);
