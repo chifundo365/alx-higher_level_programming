@@ -42,7 +42,6 @@ int is_palindrome(listint_t **head)
 		if (!fast)
 		{
 			head2 = reverse_list(slow);
-			print_listint(head2);
 			while (temp != slow)
 			{
 				if (temp->n != head2->n)
