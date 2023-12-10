@@ -1,9 +1,7 @@
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if isinstance(matrix, list):
-        matric_copy = matrix.copy()
-        for row in matrix_copy:
-            row_index = matrix_copy.index(row)
-            for digit in row:
-                col_index = row.index(digit)
-                matrix_copy[row_index][col_index] = digit * digit
-        return matrix_copy
+    matrix_copy = [list(row) for row in matrix]
+    for i in range(len(matrix_copy)):
+        for x in range(len(matrix_copy[i])):
+            matrix_copy[i][x] **= 2
+    return matrix_copy
