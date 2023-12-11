@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if len(a_dictionary.values()) == 0:
+    if not a_dictionary:
         return None
-    return (max(v for v in a_dictionary.values()))
+    biggest = max(v for v in a_dictionary.values())
+    return (key[0] for key in a_dictionary.keys() if a_dictionary[key] == biggest)
