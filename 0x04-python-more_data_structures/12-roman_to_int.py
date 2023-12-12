@@ -7,12 +7,13 @@ def roman_to_int(roman_string):
     key_numerals = {
             "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000
             }
-
+    prev_value = 0
     for rmn_char in roman_string:
         if rmn_char in key_numerals.keys():
             rmn_value = key_numerals[rmn_char]
-            if roman_string.index(rmn_char) != 0 and rmn_value > sum:
-                sum = rmn_value - sum
+            if rmn_value > prev_value and prev_value != 0:
+                sum += (rmn_value - prev_value)
             else:
                 sum += rmn_value
+            prev_value = rmn_value
     return sum
