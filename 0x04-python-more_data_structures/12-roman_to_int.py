@@ -12,7 +12,7 @@ def roman_to_int(roman_string):
         if rmn_char in key_numerals.keys():
             rmn_value = key_numerals[rmn_char]
             if rmn_value > prev_value and prev_value != 0:
-                sum += (rmn_value - prev_value)
+                sum = rmn_value - sum
             else:
                 sum += rmn_value
             prev_value = rmn_value
