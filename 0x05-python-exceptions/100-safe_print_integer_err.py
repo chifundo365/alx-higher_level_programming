@@ -14,5 +14,5 @@ def safe_print_integer_err(value):
         data_types = [int, float, list, str, bool, tuple, dict]
         for i in data_types:
             if isinstance(value, i):
-                print("{} {}".format(msg, str(i)[7:12], file=sys.stderr))
+                print("{} {}".format(msg, str(i)[7:12]), file=sys.stderr)
         return False
