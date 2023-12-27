@@ -41,7 +41,7 @@ class Square:
         if type(value) != tuple or len(value) != 2:
             raise TypeError(msg)
         for x in self._position:
-            if type(x) != int:
+            if type(x) != int or x < 0:
                 raise TypeError(msg)
         self.__position = value
 
@@ -52,7 +52,8 @@ class Square:
         if self.__size == 0:
             print("")
         elif self.__size > 0:
-            if self.__position[1] == 0 and self.__position[0]:
-                print(" " * self.__position[0], end='')
+            for n in range(self.__position[1]):
+                print()
             for i in range(self.__size):
+                print(" " * self.__position[0], end='')
                 print("#" * self.__size)
