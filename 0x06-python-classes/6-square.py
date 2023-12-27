@@ -15,7 +15,7 @@ class Square:
         if type(pos) != tuple or len(pos) != 2:
             raise TypeError(msg)
         for x in pos:
-            if type(x) != int:
+            if type(x) != int or x < 0:
                 raise TypeError(msg)
         self.__position = pos
 
