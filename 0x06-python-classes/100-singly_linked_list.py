@@ -7,7 +7,7 @@ class Node:
 
     def __init__(self, data, next_node=None):
         if type(data) != int:
-            raise TypeError("data must be integer")
+            raise TypeError("data must be an integer")
         self.__data = data
         if next_node:
             if type(next_node) is not Node:
@@ -21,7 +21,7 @@ class Node:
     @data.setter
     def data(self, value):
         if type(value) != int:
-            raise TypeError("data must be integer")
+            raise TypeError("data must be an integer")
         self.__data = value
 
     @property
@@ -56,6 +56,7 @@ class SinglyLinkedList:
                 current = current.next_node
                 if not current:
                     prev.next_node = new_node
+                    new_node.next_node = None
                     break
                 if current.data > new_node.data:
                     prev.next_node = new_node
