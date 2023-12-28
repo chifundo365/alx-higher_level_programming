@@ -9,8 +9,9 @@ class Node:
         if type(data) != int:
             raise TypeError("data must be integer")
         self.__data = data
-        if next_node != None or type(next_node) != Node:
-            raise TypeError("next_node must be a Node object")
+        if next_node:
+            if type(next_node) is not Node:
+                raise TypeError("next_node must be a Node object")
         self.__next_node = next_node
 
     @property
@@ -29,8 +30,9 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if value != None or type(value) != Node:
-            raise TypeError("next_node must be a Node object")
+        if value:
+            if type(value) is not Node:
+                raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
@@ -50,25 +52,23 @@ class SinglyLinkedList:
         else:
             current = self.__head
             while current:
-                previous = current
+                prev = current
                 current = current.next_node
-                if current is None:
+                if not current:
                     prev.next_node = new_node
+                    break
                 if current.data > new_node.data:
                     prev.next_node = new_node
                     new_node.next_node = current
                     break
+
     def __str__(self):
         output = ""
         current = self.__head
         while current:
-            output += str(current.data) + "\n"
+            if current.next_node:
+                output += str(current.data) + "\n"
+            else:
+                output += str(current.data)
             current = current.next_node
         return output
-
-
-            
-
-
-
-
