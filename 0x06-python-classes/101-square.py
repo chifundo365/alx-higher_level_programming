@@ -53,7 +53,7 @@ class Square:
         if self.__size == 0:
             output += "\n"
         elif self.__size > 0:
-            for n in range(self.__position[]):
+            for n in range(self.__position[1]):
                 output += '\n'
             for i in range(self.__size):
                 output += " " * self.__position[0]
