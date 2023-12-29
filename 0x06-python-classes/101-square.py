@@ -49,17 +49,13 @@ class Square:
         return self.__size ** 2
 
     def __str__(self):
-        output = ''
-        if self.__size == 0:
-            output += ""
-        elif self.__size > 0:
+        if self.__size > 0:
             for n in range(self.__position[1]):
-                output += '\n'
+                print()
             for i in range(self.__size):
-                output += " " * self.__position[0]
-                output += ("#" * self.__size)
-                output += '\n'
-        return output
+                print(" " * self.__position[0], end='')
+                print("#" * self.__size)
+        return ""
 
     def my_print(self):
         if self.__size == 0:
