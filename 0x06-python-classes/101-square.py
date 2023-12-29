@@ -51,13 +51,14 @@ class Square:
     def __str__(self):
         output = ''
         if self.__size == 0:
-            output += "\n"
+            output += ""
         elif self.__size > 0:
             for n in range(self.__position[1]):
                 output += '\n'
             for i in range(self.__size):
                 output += " " * self.__position[0]
-                output += "#" * self.__size + "\n"
+                output += ("#" * self.__size)
+                output += '\n'
         return output
 
     def my_print(self):
