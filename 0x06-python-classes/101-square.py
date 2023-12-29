@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""define a class named Square"""
+"""define a class named Square with str magic function."""
 
 
 class Square:
