@@ -11,3 +11,9 @@ class LockedClass:
         else:
             msg = f"'LockedClass' object has no attribute '{key}'"
             raise AttributeError(msg)
+
+    def __getattribute__(self, name):
+        if name == 'first_name':
+            return object.__getattribute__(self, name)
+        else:
+            msg = f"'LockedClass' object has no attribute '{name}'"
