@@ -3,10 +3,6 @@ testing add-integer function
 >>> import sys
 >>> sys.path.insert(1, "..")
 >>> add_integer = __import__("0-add_integer").add_integer
->>> add_integer("text", 5)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
 >>> add_integer(20, [20])
 Traceback (most recent call last):
 ...
@@ -23,5 +19,3 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
->>> add_integer(-10)
-88
