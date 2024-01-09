@@ -1,8 +1,8 @@
 '''0-add-integer module'''
 testing add-integer function
-from ../ import 0-add_integer.add_integer
->>> print(add_integer)
-...
+>>> import sys
+>>> sys.path.insert(1, "..")
+>>> add_integer = __import__("0-add_integer").add_integer
 >>> add_integer("text", 5)
 Traceback (most recent call last):
 ...
