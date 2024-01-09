@@ -3,16 +3,12 @@
 This module implements the add_integer function
 Test for this module are contained in
 ./test/add-integer.txt file
-The tests are pydoc test
-feel free to addd some taste cases
 """
 
 
 def add_integer(a, b=98):
     """
-    adds two integers
-    if one or both of the arguments are not int
-    it raise a typeError exception
+    adds two integers raises an exception if fails
     """
 
     if (type(a) is not int) and (type(a) is not float):
