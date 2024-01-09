@@ -9,5 +9,5 @@ def load_from_json_file(file_name):
     Return: real python Object file
     """
     import json
-    with open(filename, encoding="utf-8") as f:
+    with open(file_name, encoding="utf-8") as f:
         return json.loads(f.read())
