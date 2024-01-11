@@ -27,6 +27,7 @@ class Student:
         obj = self
         if hasattr(obj, '__dict__'):
             new_dict = obj.__dict__.items()
-            if attrs:
+            if attrs is not None:
                 return {k: v for k, v in new_dict if k in attrs}
             return {k: v for k, v in new_dict}
+        
