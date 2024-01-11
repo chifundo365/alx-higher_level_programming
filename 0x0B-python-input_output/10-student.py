@@ -30,4 +30,3 @@ class Student:
             if attrs is not None:
                 return {k: v for k, v in new_dict if k in attrs}
             return {k: v for k, v in new_dict}
-        
