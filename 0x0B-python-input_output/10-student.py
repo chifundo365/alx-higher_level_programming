@@ -29,4 +29,4 @@ class Student:
             new_dict = obj.__dict__.items()
             if attrs:
                 return {k: v for k, v in new_dict if k in attrs}
-            return {obj.__dict__}
+            return {k: v for k, v in new_dict}
