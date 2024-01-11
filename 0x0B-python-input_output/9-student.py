@@ -13,7 +13,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def class_to_json(self):
+    def to_json(self):
         """
         makes a dictionary of all attributes in a class
 
