@@ -16,5 +16,5 @@ def class_to_json(obj):
     """
     if hasattr(obj, '__dict__'):
         new_dict = obj.__dict__.items()
-        allowed = int, str, bool, dict
+        allowed = int, str, bool, dict, list
         return {k: v for k, v in new_dict if isinstance(v, allowed)}
