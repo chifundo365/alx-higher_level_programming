@@ -14,8 +14,7 @@ def class_to_json(obj):
     Return: a json serialisable python object with values equal to either
             int, str, bool, and dict
     """
-
-    if (type(obj) == dict) and (hasattr(obj, '__dict__')):
-        allowed = int, str, dict, list, bool
-        s_obj = {k: v for k, v in obj.items() if isinstance(v, allowed)}
-        return s_obj
+    if hasattr(obj, '__dict__'):
+        new_dict = obj.__dict__.items()
+        allowed = int, str, bool, dict
+        return {k: v for k, v in new_dict if isinstance(v, allowed)}
