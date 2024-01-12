@@ -38,4 +38,4 @@ class Student:
             json_string: json string containing attributes
             self       : the instance itself
         """
-        self.__dict__ = json.loads(json)
+        self.__dict__ = json
