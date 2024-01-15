@@ -6,28 +6,22 @@
 
 def pascal_triangle(n):
     """
-    makes a pascals triangle
+    Generates a pascal's triangle up to n rows
+
     Args:
-        n: number of rows for the triangle
+        n (int): number of rows for the triangle
+
     Return: a list of lists of int's representing pasclas triangle
     """
     if (n <= 0):
         return []
-    array = []
+    triangle = []
     for row in range(n):
-        if row == 0:
-            array.append([1])
-            prev = [1]
-        else:
-            length = len(prev)
-            current = []
-            current.append(1)
-            for col in range(length - 1):
-                pos = length - col - 1
-                if pos:
-                    pos_value = prev[col] + prev[col + 1]
-                    current.append(pos_value)
-            current.append(1)
-            prev = current
-            array.append(current)
-    return array
+        current_row = [1]  # triangle always starts with a 1
+        if triangle:
+            prev_row = triangle[-1]
+            for col in range(len(prev_row) - 1):
+                current_row.append(prev_row[col] + prev_row[col + 1])
+            current_row.append(1)  # triangle always ends with a 1
+        triangle.append(current_row)
+    return triangle
