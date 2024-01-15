@@ -51,5 +51,5 @@ def append_after(filename="", search_string="", new_string=""):
     read_lines = read_all_lines(filename)
     for i in range(len(read_lines)):
         if search_string in read_lines[i]:
-            read_lines[i] = read_lines[i] + new_string + "\n"
+            read_lines[i] = read_lines[i] + new_string
     write_all_lines(filename, read_lines)
