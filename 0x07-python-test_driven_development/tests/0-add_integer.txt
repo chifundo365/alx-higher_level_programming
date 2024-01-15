@@ -17,10 +17,10 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 	...
 OverflowError: cannot convert float infinity to integer
->>> add_integer(3.4, None)
+>>> add_integer(None, 34.5)
 Traceback (most recent call last):
 	...
-TypeError: b must be an integer
+TypeError: a must be an integer
 >>> add_integer("hello")
 Traceback (most recent call last):
 ...
