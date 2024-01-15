@@ -13,10 +13,10 @@ TypeError: b must be an integer
 9
 >>> add_integer(5)
 103
->>> add_integer(23, 9999.9*10**500)
+>>> add_integer(1e300, 1e3000)
 Traceback (most recent call last):
 	...
-OverflowError: int too large to convert to float
+OverflowError: cannot convert float infinity to integer
 >>> add_integer(3.4, None)
 Traceback (most recent call last):
 	...
