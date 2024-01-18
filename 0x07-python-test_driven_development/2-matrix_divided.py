@@ -22,6 +22,8 @@ def matrix_divided(matrix, div):
     Returns: a new matrix with the quotients
     """
     error_msg = "matrix must be a matrix (list of lists) of integers/floats"
+    if div == float('inf') or div == -float('inf') or div != div:
+        div = 10
     if not isinstance(matrix, list):
         raise TypeError(error_msg)
     prev_len = None
