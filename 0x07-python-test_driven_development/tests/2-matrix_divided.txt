@@ -30,6 +30,24 @@ Div is Zero
 		...
 	ZeroDivisionError: division by zero
 
+Div is not an int or float
+	>>> matrix_divided(normal_matrix, "biggest number")
+	Traceback (most recent call last):
+		...
+	TypeError: div must be a number
+
+Passing 1 argument instead of 2
+	>>> matrix_divided(normal_matrix)
+	Traceback (most recent call last):
+		...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Passing no argument
+	>>> matrix_divided()
+	Traceback (most recent call last):
+		...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
 Normal matrix and div
 	>>> matrix_divided(normal_matrix, 2)
 	[[6.0, 7.0, 45.0], [5.0, 2.0, 1.0]]

@@ -41,8 +41,5 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div <= 0:
         raise ZeroDivisionError("division by zero")
-    try:
-        new_matrix = [[round(v / div, 2) for v in row] for row in matrix]
-    except ZeroDivisionError:
-        raise ZeroDivisionError("division by zero")
+    new_matrix = [[round(v / div, 2) for v in row] for row in matrix]
     return new_matrix
