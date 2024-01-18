@@ -28,5 +28,5 @@ def text_indentation(text):
         print(c, end="")
         newline = False
         if c in {":", ".", "?"}:
-            print("\n" * 2,end="")
+            print("\n" * 2, end="")
             newline = True
