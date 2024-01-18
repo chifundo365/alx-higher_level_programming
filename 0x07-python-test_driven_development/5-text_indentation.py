@@ -21,4 +21,4 @@ def text_indentation(text):
     for c in text:
         print(c, end="")
         if c in {":", ".", "?"}:
-            print("\n")
+            print("\n", end="")
