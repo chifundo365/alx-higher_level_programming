@@ -11,7 +11,7 @@ If string has  a .
 	>>> text_indentation("Hello. man")
 	Hello.
 	<BLANKLINE>
-	 man
+	man
 
 if string has a question mark
 	>>> text_indentation("are you ok?uncle")
@@ -33,6 +33,6 @@ Pass all the arguments
 	<BLANKLINE>
 	cars, jets.
 	<BLANKLINE>
-	 take care
+	take care
 
 

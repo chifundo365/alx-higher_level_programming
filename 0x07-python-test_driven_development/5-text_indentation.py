@@ -18,9 +18,16 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    newline = False
     for c in text:
-        if c == " " and text[text.index(c) + 1] == "\n":
+        if text.index(c) == 0 and c.isspace():
+            newline = False
+            continue
+        if newline and c.isspace():
+            newline = False
             continue
         print(c, end="")
+        newline = False
         if c in {":", ".", "?"}:
             print("\n")
+            newline = True
