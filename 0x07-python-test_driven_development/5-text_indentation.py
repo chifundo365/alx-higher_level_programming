@@ -24,10 +24,9 @@ def text_indentation(text):
             newline = False
             continue
         if newline and c.isspace():
-            newline = False
             continue
         print(c, end="")
         newline = False
         if c in {":", ".", "?"}:
-            print("\n")
+            print("\n" * 2,end="")
             newline = True
