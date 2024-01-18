@@ -21,22 +21,21 @@ def matrix_divided(matrix, div):
 
     Returns: a new matrix with the quotients
     """
-    type_error_msg = "matrix must be a matrix \
-            (list of lists) of integers/floats"
+    error_msg = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list):
-        raise TypeError(type_error_msg)
+        raise TypeError(error_msg)
     prev_len = None
     for list_item in matrix:
         if not isinstance(list_item, list):
-            raise TypeError(msg)
+            raise TypeError(error_msg)
         if prev_len:
             if len(list_item) != prev_len:
-                raise TypeError("Each row of the matrix \
-                        must have the same size")
+                msg = "Each row of the matrix must have the same size"
+                raise TypeError(msg)
         prev_len = len(list_item)
         for item in list_item:
             if not isinstance(item, int) and not isinstance(item, float):
-                raise TypeError(type_error_msg)
+                raise TypeError(error_msg)
 
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
