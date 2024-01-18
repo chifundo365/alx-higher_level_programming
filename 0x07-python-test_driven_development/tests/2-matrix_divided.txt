@@ -5,36 +5,36 @@ Using ``matrix divide``
 ----------------------
 
 Import function from module:
-	>>> __import__("2-matrix_divide").matrix_divided
+	>>> matrix_divided =  __import__("2-matrix_divided").matrix_divided
 
 Initialise Normalc Matrix:
-	>>> normal_matrix = [12, 14, 90], [10, 4, 2]]
+	>>> normal_matrix = [[12, 14, 90], [10, 4, 2]]
 
 Matrix with values not  int/float
 	>>> matrix = [[12, 23, 'h'], ['hello', 12, '13']]
 	>>> matrix_divided(matrix, 3)
 	Traceback (most recent call last):
 		...
-	TypeError: matrix must be a matrix(list of lists) of integers/floats
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Row lengths not equal
 	>>> matrix = [[23, 45], [50, 23.50, 30]]
 	>>> matrix_divided(matrix, 2)
-	Traceback (most recent call last)
+	Traceback (most recent call last):
 		...
 	TypeError: Each row of the matrix must have the same size
 
 Div is Zero
 	>>> matrix_divided(normal_matrix, 0)
-	Traceback (last recent call last):
+	Traceback (most recent call last):
 		...
-	TypeError: div must be a number
+	ZeroDivisionError: division by zero
 
 Normal matrix and div
 	>>> matrix_divided(normal_matrix, 2)
-	[[6.00, 7.00, 45.00], [5.00, 2.00, 1.00]]
+	[[6.0, 7.0, 45.0], [5.0, 2.0, 1.0]]
 
 Divide matrix with a zerov as value
 	>>> matrix = [[34, 0, 89], [0, 13, 97]]
 	>>> matrix_divided(matrix, 5)
-	Tracback (most recent call last 
+	[[6.8, 0.0, 17.8], [0.0, 2.6, 19.4]]
