@@ -39,7 +39,7 @@ def matrix_divided(matrix, div):
 
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
-    if div <= 0:
+    if div == 0:
         raise ZeroDivisionError("division by zero")
     new_matrix = [[round(v / div, 2) for v in row] for row in matrix]
     return new_matrix
