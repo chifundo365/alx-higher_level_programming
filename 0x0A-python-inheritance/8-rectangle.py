@@ -13,6 +13,9 @@ class BaseGeometry:
     def __init__(self, width, height):
         """
         Classs instantiation and validating the input fields
+        args:
+            height(int): height input
+            wdth(int)  : width input
         """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
@@ -26,7 +29,9 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ validates the int value """
+        """
+        validates the int value 
+        """
         if type(value) is not int:
             raise TypeError(f"{name} must be an integer")
         elif value <= 0:
