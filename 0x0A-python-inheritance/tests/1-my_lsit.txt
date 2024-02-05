@@ -1,0 +1,43 @@
+`` 1-my_list module ``
+======================
+
+`` Using print_sorted ``
+------------------------
+
+Import module
+>>> My_list = __import__('1-my_list').MyList
+
+Create an empty list
+	>>> my_list = My_list()
+	>>> len(my_list)
+	0
+
+Append an integer to the list
+	>>> my_list.append(4)
+	>>> my_list[0]
+	4
+
+Append 3 integers
+	>>> for e in [12, 56, 8]:
+	...	my_list.append(e)
+	>>> len(my_list)
+	4
+
+Modify a value at index -1
+	>>> my_list[-1] = 100
+	>>> my_list[-1]
+	100
+
+Insert an integer at index 2
+	>>> my_list.insert(2, 45)
+	>>> my_list
+	[4, 12, 45, 56, 100]
+
+Reverse the list
+	>>> my_list.reverse()
+	>>> my_list
+	[100, 56, 45, 12, 4]
+
+Use the print_sorted method to sort in ascending order
+	>>> my_list.print_sorted()
+	[4, 12, 45, 56, 100]
