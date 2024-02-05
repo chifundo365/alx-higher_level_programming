@@ -6,8 +6,8 @@ Defines a Base class 'BaseGeometry'
 
 class BaseGeometry:
     """
-    Geometry  base class
-    contains instance methonds to find area.
+        Implementation of Geometry  base class
+        contains instance methonds to find area.
     """
 
     def __init__(self, width, height):
