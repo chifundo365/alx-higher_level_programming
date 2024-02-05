@@ -11,7 +11,11 @@ class MyInt(int):
 
 
     def __eq__(self, other):
-        return self != other
+        if self == other:
+            return False
+        return True
     
     def __ne__(self, other):
-        return self == other
+        if self != other:
+            return True
+        return False
