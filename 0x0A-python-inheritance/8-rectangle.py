@@ -5,9 +5,15 @@ Defines a Base class 'BaseGeometry'
 
 
 class BaseGeometry:
-    """ Geometry  base class """
+    """
+    Geometry  base class
+    contains instance methonds to find area.
+    """
 
     def __init__(self, width, height):
+        """
+        Classs instantiation and validating the input fields
+        """
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
