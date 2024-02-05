@@ -13,20 +13,20 @@ Make a new instance of BaseGeometry
 Validating value input of the integer_validator method
 
 	If pass a normal int
-		>>> circle.integer_validator("cliff", 5)
+		>>> circle.integer_validator("size", 5)
 	
 	
 	pass a Non int input
-		>>> circle.integer_validator("cliff", ['bosssup'])
+		>>> circle.integer_validator("age", ['bosssup'])
 		Traceback (most recent call last):
 			...
-		TypeError: <name> must be an integer
+		TypeError: age must be an integer
 
 	Pass a negative number
-		>>> circle.integer_validator("aba", -4)
+		>>> circle.integer_validator("weight", -4)
 		Traceback (most recent call last):
 			...
-		ValueError: <name> must be greater than 0
+		ValueError: weight must be greater than 0
 	
 	pass only the name argument
 		>>> circle.integer_validator("alx")
