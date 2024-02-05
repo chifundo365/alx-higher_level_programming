@@ -18,4 +18,4 @@ class BaseGeometry:
 
         Returns: None
         """
-        raise ValueError("area is not implemented")
+        raise Exception("area is not implemented")
