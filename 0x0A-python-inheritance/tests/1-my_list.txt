@@ -1,7 +1,7 @@
 `` 1-my_list module ``
 ======================
 
-`` Using print_sorted ``
+`` Using MyList and print_sorted ``
 ------------------------
 
 Import module
@@ -11,6 +11,11 @@ Create an empty list
 	>>> my_list = My_list()
 	>>> len(my_list)
 	0
+
+print_soted method on an empty lsit
+	>>> my_list.print_sorted()
+	[]
+
 
 Append an integer to the list
 	>>> my_list.append(4)
@@ -41,3 +46,8 @@ Reverse the list
 Use the print_sorted method to sort in ascending order
 	>>> my_list.print_sorted()
 	[4, 12, 45, 56, 100]
+
+Append a negative number and sort
+	>>> my_list.append(-8)
+	>>> my_list.print_sorted()
+	[-8, 4, 12, 45, 56, 100]
