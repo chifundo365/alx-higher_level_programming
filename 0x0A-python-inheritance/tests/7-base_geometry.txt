@@ -1,0 +1,37 @@
+`` 7-base_geometry module ``
+============================
+
+`` Using BaseGeometry class ``
+------------------------------
+
+Import the class from the module
+	>>> bg = __import__('7-base_geometry').BaseGeometry
+
+Make a new instance of BaseGeometry
+	>>> circle = bg()
+
+Validating value input of the integer_validator method
+
+	If pass a normal int
+		>>> circle.integer_validator("cliff", 5)
+	
+	
+	pass a Non int input
+		>>> circle.integer_validator("cliff", ['bosssup'])
+		Traceback (most recent call last):
+			...
+		TypeError: <name> must be an integer
+
+	Pass a negative number
+		>>> circle.integer_validator("aba", -4)
+		Traceback (most recent call last):
+			...
+		ValueError: <name> must be greater than 0
+	
+	pass only the name argument
+		>>> circle.integer_validator("alx")
+		Traceback (most recent call last):
+			...
+		TypeError: integer_validator() missing 1 required positional argument: 'value'
+	
+	
