@@ -9,13 +9,8 @@ class MyInt(int):
     Inherits from int class and inverts == and != operators
     """
 
-
     def __eq__(self, other):
-        if self == other:
-            return False
-        return True
-    
+        return not super.__eq__(other)
+
     def __ne__(self, other):
-        if self != other:
-            return True
-        return False
+        return not super.__ne__(other)
