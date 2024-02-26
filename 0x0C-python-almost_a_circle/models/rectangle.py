@@ -3,10 +3,10 @@
 Implements a class named Rectangle which inherits from Base class
 """
 
-from base import Base
+from models.base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """ Implementation of a class reprsenting a Rectangle """
 
     def __init__(self, width, height, x=0, y=0, id=None):

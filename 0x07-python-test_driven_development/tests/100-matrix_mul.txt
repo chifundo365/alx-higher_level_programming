@@ -128,4 +128,10 @@ Pass nothing to the function
 	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
 
 Pass normal values
-	>>> m_a = [[]]
+	>>> m_a = [[4, 6], [10, 2.4]]; m_b  = [[3, 1, 4], [6, 0, 5]]
+	>>> matrix_mul(m_a, m_b)
+	[[48, 4, 46], [44.4, 10, 52]]
+
+	Pass Floats
+		>>>
+
