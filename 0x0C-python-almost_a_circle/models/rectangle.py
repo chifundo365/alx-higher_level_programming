@@ -157,5 +157,5 @@ class Rectangle(Base):
         Returns:
         None
         """
-        for row in range(self.__width):
-            print("#" * self.__height)
+        for row in range(self.__height):
+            print("#" * self.__width)
