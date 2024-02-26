@@ -159,3 +159,13 @@ class Rectangle(Base):
         """
         for row in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        modifies the string value of the rectangle class
+
+        Returns:
+            str: (<id>) <x>/<y> - <width>/<height>
+        """
+        return "({}) {}/{} - {}/{} \
+        ".format(self.id, self.__x, self.__y, self.__width, self.__height)
