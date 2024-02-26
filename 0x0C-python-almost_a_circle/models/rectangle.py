@@ -149,3 +149,13 @@ class Rectangle(Base):
         int: area of the rectangle
         """
         return (self.__width) * (self.__height)
+
+    def display(self):
+        """
+        prints to stdout the rectangle instance with the character #
+
+        Returns:
+        None
+        """
+        for row in range(self.__width):
+            print("#" * self.__height)
