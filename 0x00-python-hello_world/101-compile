@@ -1,0 +1,3 @@
+#!/bin/bash
+FILE_XEX=$(basename -- "$PYFILE" .py)
+echo "Compiling $PYFILE ..." && python3 -m py_compile $PYFILE && cd __pycache__ && mv "./$FILE_XEX.cpython-38.pyc"  "../$FILE_XEX.pyc" && export PYFILEc="$FILE_XEX.pyc" && cd .. && rm -r __pycache__
