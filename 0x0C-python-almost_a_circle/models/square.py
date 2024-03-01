@@ -20,3 +20,27 @@ class Square(Rectangle):
             self.y,
             self.width
         )
+
+    @property
+    def size(self):
+        """
+        Getter method for the size property
+
+        Returns:
+            int: the size property
+        """
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """
+        Setter: sets the value of the size
+
+        Args:
+            size: the size of the square
+
+        Returns:
+            None
+        """
+        self.width = size
+        self.height = size
