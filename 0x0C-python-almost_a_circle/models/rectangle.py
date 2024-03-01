@@ -151,6 +151,15 @@ class Rectangle(Base):
         return (self.__width) * (self.__height)
 
     def update(self, *args):
+        """
+        Updates instance attributes using keyword and non-keyword arguments:
+
+        Args:
+            args (tuple): arguments to update the attributes
+            kwargs (dict): keyword arguments to update the instance attribute
+
+        Returns: None
+        """
         if len(args) >= 5:
             self.id = args[0]
             self.__width = args[1]
