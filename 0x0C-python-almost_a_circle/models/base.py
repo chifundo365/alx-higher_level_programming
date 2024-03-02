@@ -14,3 +14,17 @@ class Base:
             self.id = id
         else:
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        convert a list of dictionaries each representing an instance to json
+
+        Args:
+            list_dictionaries (list): list of dictionaries of instances
+
+        Returns:
+            str: json string if the list is non empty else "[]"
+        """
+        import json
+        return json.dumps(list_dictionaries)
