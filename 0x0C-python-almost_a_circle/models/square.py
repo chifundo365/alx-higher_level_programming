@@ -85,3 +85,17 @@ class Square(Rectangle):
                 self.x = kwargs.get("x")
             if "y" in kwargs:
                 self.y = kwargs.get("y")
+
+    def to_dictionary(self):
+        """
+        inserts instance attributes in a dictionary
+
+        Returns:
+            dict: dictionary containing id, size, x and y attributes
+        """
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+            }
