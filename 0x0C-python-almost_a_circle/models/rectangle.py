@@ -202,6 +202,22 @@ class Rectangle(Base):
         for row in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
+    def to_dictionary(self):
+        """
+        Creates a dictionary with the instance attributes created inside class
+
+        Returns:
+            dict: dictionary containing id, width, height, x and y attributes
+        """
+        new_dict = {
+            "id": self.id,
+            "width": self.__width,
+            "height": self.__height,
+            "x": self.__x,
+            "y": self.__y
+        }
+        return new_dict
+
     def __str__(self):
         """
         modifies the string value of the rectangle class
