@@ -27,4 +27,6 @@ class Base:
             str: json string if the list is non empty else "[]"
         """
         import json
-        return json.dumps(list_dictionaries)
+        if list_dictionaries:
+            return json.dumps(list_dictionaries)
+        return "[]"
