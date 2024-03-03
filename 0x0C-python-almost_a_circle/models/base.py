@@ -48,7 +48,4 @@ class Base:
         for object in list_objs:
             dict_list.append(object.to_dictionary())
         with open(filename, "w") as file:
-            if list_objs is not None:
-                file.write(Base.to_json_string(dict_list))
-            else:
-                file.write("[]")
+            file.write(Base.to_json_string(dict_list))
