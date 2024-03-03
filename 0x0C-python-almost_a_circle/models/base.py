@@ -30,3 +30,22 @@ class Base:
         if list_dictionaries:
             return json.dumps(list_dictionaries)
         return "[]"
+
+    def save_to_file(cls, list_objs):
+        """
+        Writes json string representation to a file
+
+        Args:
+            list_obj (list): list of instance object of square or rectangle
+                             classes
+                             if list is a empty it add an empty list
+        Returns:
+            None
+        """
+        filename = cls.__name__ + ".json"
+        json_string = Base.to_json_string(list_objs)
+        with open(filename, "w") as file:
+            if list_objs:
+                file.write(json_string)
+            else:
+                file.write("[]")
