@@ -74,7 +74,7 @@ class Base:
         create a new instance with all the atrributes already set
 
         Args:
-            dictionary (dict): a dictionary containing all the 
+            dictionary (dict): a dictionary containing all the
                                attributes and their values
         Returns:
             Rectangle: a rectangle instance if the dictionary
@@ -85,9 +85,9 @@ class Base:
         new_instance = None
 
         if cls.__name__ == "Rectangle":
-            new_instance = cls(1, 1, 1, 1)
+            new_instance = cls(1, 1)
         elif cls.__name__ == "Square":
-            new_instance = cls(1, 1, 1)
+            new_instance = cls(1)
         new_instance.update(**dictionary)
 
         return new_instance
