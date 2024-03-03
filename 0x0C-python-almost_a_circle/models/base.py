@@ -50,3 +50,20 @@ class Base:
                 dict_list.append(object.to_dictionary())
         with open(filename, "w") as file:
             file.write(Base.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        convert JSON string representation to a list object
+
+        Args:
+            json_string: json string input to be converted back
+                         to a list object
+
+        Returns:
+            list: list of JSON string representation of "json_string"
+        """
+        import json
+        if json_string is not None:
+            return json.loads(json_string)
+        return []
