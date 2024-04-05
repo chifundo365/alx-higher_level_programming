@@ -2,4 +2,5 @@
 SELECT c.id, c.name, s.name
 FROM cities c
 JOIN states s
-WHERE s.id = c.id
+WHERE c.id = c.state_id
+ORDER BY c.id
