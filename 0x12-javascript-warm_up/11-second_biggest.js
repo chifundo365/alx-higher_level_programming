@@ -17,7 +17,8 @@ if (numbers.length === 2 || numbers.length === 3) {
     if (number !== biggest && ((biggest - number) < (biggest - secondBiggest)) && numbers.length > 4) {
       secondBiggest = number;
     } else if (numbers.length === 4) {
-      secondBiggest = numbers[3] > numbers[4] ? numbers[4] : numbers[3];
+      secondBiggest = numbers[2] > numbers[3] ? numbers[3] : numbers[2];
+      break;
     }
   }
   console.log(secondBiggest);
