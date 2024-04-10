@@ -13,7 +13,7 @@ class Square extends Sq {
       for (let i = 0; i < this.width; i++) {
         let output = '';
         for (let y = 0; y < this.height; y++) {
-          output += 'C';
+          output += c;
         }
         console.log(output);
       }
