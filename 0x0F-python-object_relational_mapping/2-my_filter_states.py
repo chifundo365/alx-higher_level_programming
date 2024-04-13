@@ -6,7 +6,7 @@ import MySQLdb
 from sys import argv
 
 
-def select_states(username, password, dbname, col_name):
+def select_states(username, password, dbname, name):
     try:
         db_conn = MySQLdb.connect(
                 host='localhost',
@@ -14,8 +14,9 @@ def select_states(username, password, dbname, col_name):
                 passwd=password,
                 db=dbname)
         cursor = db_conn.cursor()
-        sql = 'SELECT * FROM states WHERE name = %s ORDER BY id'
-        cursor.execute(sql, (col_name,))
+        sql = "SELECT * FROM states WHERE name = '{}' ORDER BY id  \
+                ".format(name)
+        cursor.execute(sql)
 
         for row in cursor.fetchall():
             print(row)
