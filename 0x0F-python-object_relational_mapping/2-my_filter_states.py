@@ -14,8 +14,8 @@ def select_states(username, password, dbname, name):
                 passwd=password,
                 db=dbname)
         cursor = db_conn.cursor()
-        sql = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin = '{}' ORDER BY id  \
-                ".format(name)
+        sql = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin  \
+                = '{}' ORDER BY id".format(name)
         cursor.execute(sql)
 
         for row in cursor.fetchall():
