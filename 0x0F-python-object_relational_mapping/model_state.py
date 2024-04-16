@@ -21,11 +21,6 @@ class State(Base):
             autoincrement=True,
             nullable=False,
             primary_key=True,
+            unique=True
             )
     name = Column("name", String(128), nullable=False)
-
-
-engine = create_engine(
-        "mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa"
-        )
-Base.metadata.create_all(engine)
