@@ -5,14 +5,18 @@ This script lists al the states objects form the database 'hbtn+0e_6_usa'
 
 
 if __name__ == '__main__':
+    from sys import argv
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
     from model_state import Base, State
 
     engine = create_engine(
-            'mysql+mysqldb://root:root@localhost:3306/hbtn_0e_6_usa'
+            'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                argv[1],
+                argv[2],
+                argv[3]
+                )
             )
-    Base.metadata.create_all(bind=engine)
     Session = sessionmaker(bind=engine)
     session = Session()
 
