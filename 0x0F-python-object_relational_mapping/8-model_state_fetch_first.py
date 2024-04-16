@@ -21,5 +21,7 @@ if __name__ == '__main__':
     session = Session()
 
     states = session.query(State).where(State.id == 1).order_by(State.id).all()
-    for state in states:
-        print('{}: {}'.format(state.id, state.name))
+    if len(states):
+        print('{}: {}'.format(states[0].id, states[0].name))
+    else:
+        print('Nothing')
