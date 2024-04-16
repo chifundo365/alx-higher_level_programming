@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
-Contains the class definiition of a sates and and instance \
-        Base = declarative_base()
+Contains the class definiition of a sates and and instance
+Base = declarative_base()
 '''
 from sqlalchemy import create_engine, Column, Integer, String, CHAR
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,6 +12,10 @@ Base = declarative_base()
 
 
 class State(Base):
+    '''
+    creates a table states in mysql database
+    with id and name columns
+    '''
     __tablename__ = "states"
 
     id = Column(
@@ -19,7 +23,7 @@ class State(Base):
             autoincrement=True,
             nullable=False,
             primary_key=True,
-            unique=True)
+            )
     name = Column("name", String(128), nullable=False)
 
 
