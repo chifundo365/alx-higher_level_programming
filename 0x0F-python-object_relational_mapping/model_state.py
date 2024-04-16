@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Contains the class definiition of a sates and and instance
+Contains the class definiition of a states and and instance
 Base = declarative_base()
 '''
 from sqlalchemy import create_engine, Column, Integer, String, CHAR
