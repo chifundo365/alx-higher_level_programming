@@ -1,0 +1,1 @@
+delete from state where state.id

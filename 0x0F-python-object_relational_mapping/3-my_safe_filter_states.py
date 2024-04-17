@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 '''
-Lists all states from the databse hbtn_0e_0_usa
+Lists all states from the database hbtn_0e_0_usa where name matches the input
+Safe from SQL injection
 '''
 import MySQLdb
 from sys import argv
 
 
-def select_states(username, password, dbname):
+def select_states(username, password, dbname, name):
     try:
         db_conn = MySQLdb.connect(
                 host='localhost',
@@ -14,7 +15,9 @@ def select_states(username, password, dbname):
                 passwd=password,
                 db=dbname)
         cursor = db_conn.cursor()
-        cursor.execute('SELECT * FROM states ORDER BY id')
+        sql = "SELECT * FROM states WHERE name COLLATE utf8mb4_bin  \
+                = %s ORDER BY id"
+        cursor.execute(sql, (name,))
 
         for row in cursor.fetchall():
             print(row)
@@ -29,6 +32,7 @@ def select_states(username, password, dbname):
 
 if __name__ == '__main__':
     if len(argv) < 4:
-        print('usage: {} [username], [password], [dbname]'.format(argv[0]))
+        print('usage: {} [username], [password], [dbname], [state name] \
+                '.format(argv[0]))
     else:
-        select_states(argv[1], argv[2], argv[3])
+        select_states(argv[1], argv[2], argv[3], argv[4])

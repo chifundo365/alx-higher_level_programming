@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-Lists all states from the databse hbtn_0e_0_usa
+Lists all states from the databse hbtn_0e_0_usa with name starting-
+with capital N
 '''
 import MySQLdb
 from sys import argv
@@ -14,7 +15,8 @@ def select_states(username, password, dbname):
                 passwd=password,
                 db=dbname)
         cursor = db_conn.cursor()
-        cursor.execute('SELECT * FROM states ORDER BY id')
+        cursor.execute('SELECT * FROM states WHERE name \
+                COLLATE utf8mb4_bin LIKE "N%" ORDER BY id')
 
         for row in cursor.fetchall():
             print(row)
