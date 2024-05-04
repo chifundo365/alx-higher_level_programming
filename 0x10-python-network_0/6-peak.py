@@ -6,6 +6,7 @@ def find_peak(list_of_integers):
     """ finds the peak using a custom binary search algolithm """
     if not list_of_integers:
         return None
+
     def helper(start, end):
         if start == end:
             return list_of_integers[start]
