@@ -6,11 +6,10 @@ Displays the body of the response, decoded in utf-8
 import urllib
 import sys
 
-url = sys.argv[1]
-email = sys.argv[2]
 
-values = {'email': email}
-data = urllib.parse.urlencode(values).encode('ascii')
-req = urllib.request.Request(url, data)
-with urllib.request.urlopen(req) as res:
-    print(res.read().decode('utf-8')
+if __name__ == "__main__":
+    values = {'email': argv[2]}
+    data = urllib.parse.urlencode(values).encode('ascii')
+    req = urllib.request.Request(argv[1], data)
+    with urllib.request.urlopen(req) as res:
+        print(res.read().decode('utf-8')
