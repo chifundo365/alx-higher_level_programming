@@ -12,7 +12,7 @@ Example:
     python3 script_name.py http://example.com
 
 Dependencies:
-    This script requires Python 3, sys module and the urllib module.
+    This script requires Python 3, sys module  and the urllib module.
 """
 
 from urllib import request
