@@ -3,9 +3,15 @@
 
 
 def find_peak(list_of_integers):
-    """BRUTE force implementation for question """
-    max_i = None
-    for ele in list_of_integers:
-        if max_i is None or max_i < ele:
-            max_i = ele
-    return max_i
+    """ finds the peak using a custom binary search algolithm """
+    if not list_of_integers:
+        return None
+    def helper(start, end):
+        if start == end:
+            return list_of_integers[start]
+        middle = (start + end) // 2
+        if list_of_integers[middle] > list_of_integers[middle + 1]:
+            return helper(start, middle)
+        else:
+            return helper(middle + 1,  end)
+    return helper(0, len(list_of_integers) - 1)
