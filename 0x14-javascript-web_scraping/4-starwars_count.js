@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const argv = require('process').argv;
-const url = argv[2] + '/?format=json';
+const url = argv[2];
 
 let numMovies = 0;
 request(url, { json: true }, (error, res, body) => {
